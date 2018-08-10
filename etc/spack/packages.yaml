@@ -1,0 +1,16 @@
+packages:
+  intel-mpi:
+    paths:
+      intel-mpi@2017.2.174: /lustre/sw/intel
+    buildable: False 
+  intel-mkl:
+    paths:
+      intel-mkl@2017.2.174: /lustre/sw/intel/compilers_and_libraries_2017.2.174/linux/mkl
+    buildable: False 
+  all:
+    compiler: [gcc, intel]
+    providers: 
+     mpi: [intel-mpi]
+     blas: [mkl]
+     lapack: [mkl]
+
